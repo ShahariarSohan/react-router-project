@@ -1,5 +1,4 @@
 import { NavLink, Outlet } from "react-router-dom";
-
 const MainComponent = () => {
   return (
     <div>
@@ -34,6 +33,38 @@ const MainComponent = () => {
         </div>
       </nav>
       <Outlet></Outlet>
+      <footer>
+        <nav className="flex justify-between  p-5 ">
+          <h1>© 2023 Flowbite™. All Rights Reserved.</h1>
+
+          <div className="flex gap-10">
+            <NavLink
+              to="/about"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "underline" : ""
+              }
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/privacy-policy"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "underline" : ""
+              }
+            >
+              Privacy Policy
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "underline" : ""
+              }
+            >
+              Contact
+            </NavLink>
+          </div>
+        </nav>
+      </footer>
     </div>
   );
 };
