@@ -7,6 +7,7 @@ import About from "../Components/About/About";
 import PrivacyPolicy from "../Components/PrivacyPolicy/PrivacyPolicy";
 import Contact from "../Components/Contact/Contact";
 import FoodDetails from "../Components/FoodDetails/FoodDetails";
+import HomeFoods from "../Components/HomeFoods/HomeFoods";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,14 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () =>
           fetch("https://www.themealdb.com/api/json/v1/1/categories.php"),
+      },
+      {
+        path: "/foods/:categoryName",
+        element: <HomeFoods></HomeFoods>,
+        loader: ({ params }) =>
+          fetch(
+            `https://www.themealdb.com/api/json/v1/1/filter.php?c=${params.categoryName}`
+          ),
       },
       {
         path: "/foods",

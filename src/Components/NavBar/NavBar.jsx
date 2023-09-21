@@ -3,7 +3,7 @@ const NavBar = () => {
   return (
     <div>
       <nav className="flex justify-between  shadow-xl p-5 font-bold">
-        <h1 className="text-3xl font-bold">Amazon</h1>
+        <h1 className="text-3xl font-bold">SuperShop</h1>
 
         <div className="flex gap-10">
           <NavLink
