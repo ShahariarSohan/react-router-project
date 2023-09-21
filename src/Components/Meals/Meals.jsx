@@ -1,14 +1,12 @@
 import { useLoaderData, Link } from "react-router-dom";
-import HomeFood from "../HomeFood/HomeFood";
-
-const HomeFoods = () => {
+import Meal from "../Meal/Meal";
+const Meals = () => {
   const { meals } = useLoaderData();
-  console.log(meals);
   return (
     <div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 container mx-auto my-10">
         {meals.map((meal) => (
-          <HomeFood key={meal.idMeal} meal={meal}></HomeFood>
+          <Meal key={meal.idMeal} meal={meal}></Meal>
         ))}
       </div>
       <div className="text-center">
@@ -22,4 +20,4 @@ const HomeFoods = () => {
   );
 };
 
-export default HomeFoods;
+export default Meals;
