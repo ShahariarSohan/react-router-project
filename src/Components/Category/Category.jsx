@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 const Category = ({ category }) => {
-  const { strCategoryThumb, strCategory } = category;
+  const { strCategory, strCategoryThumb } = category;
   console.log(category);
   return (
-    <div className="p-5 shadow-xl rounded-lg space-y-2">
+    <div className="p-5 shadow-xl rounded-lg space-y-3 text-center ">
       <img className="mx-auto" src={strCategoryThumb}></img>
-      <h1 className="text-xl font-bold text-center">{strCategory}</h1>
+      <h1 className="font-bold">{strCategory}</h1>
     </div>
   );
 };
