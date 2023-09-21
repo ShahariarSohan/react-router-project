@@ -1,14 +1,51 @@
-import { useLoaderData } from "react-router-dom";
-import Category from "../Category/Category";
-
 const Home = () => {
-  const { categories } = useLoaderData();
   return (
-    <div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 container mx-auto my-10">
-        {categories.map((category) => (
-          <Category key={category.idCategory} category={category}></Category>
-        ))}
+    <div className="container mx-auto my-10">
+      <div className="grid gap-4">
+        <div>
+          <img
+            className="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg"
+            alt=""
+          />
+        </div>
+        <div className="grid grid-cols-5 gap-4">
+          <div>
+            <img
+              className="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              className="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              className="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              className="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              className="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
